@@ -1,0 +1,32 @@
+eye 0.0 0.0 3.5
+size 200 200
+ortho -1 -1 1 1
+
+npaths 10
+tonemapping 0.1
+seed 9
+
+# light definition
+# <.obj> intensidade r g b
+light Input/luzcornell2.obj 1.0 1.0 1.0 1.0
+
+# background color
+background 0.0 0.0 0.0
+ambient 1.0
+
+################################### OBJETOS #############################################
+
+#object definition
+# a b c d e f g h j k red green blue ka kd ks kt n [ir]
+# red sphere at x=0, y=0, z=-10 radius=1
+objectquadric 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 10.0 99.0 1.0 0.0 0.0 0.1 0.5 0.6 1.0 5 1.0
+
+#plane 1
+objectquadric 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 60.0 0.3 0.3 0.3 0.1 0.5 0.0 0.0 5 0.0
+
+#plane 2
+objectquadric 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 5.0 0.0 0.0 1.0 0.1 0.5 0.0 0.0 5 0.0
+
+#########################################################################################
+
+output Output/oneplanesphere.png

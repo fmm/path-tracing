@@ -1,0 +1,67 @@
+# Tentativa :-) de arquivo sdl para Cornell Room
+# Marcelo Walter
+# Nov. 2005
+# Este arquivo NAO foi testado!!!
+# Modificado de acordo com os testes
+# do Vinicius 6/12/2005
+
+eye 0.0 0.0 5.7
+size 200 200
+ortho -1 -1 1 1
+background 0.0 0.0 0.0
+ambient 0.5
+
+# Luz branca retangulo no centro do teto
+light Input/luzcornell.obj 1.0 1.0 1.0 1.0
+
+npaths 300
+tonemapping 1.0
+seed 9
+
+# Aqui comeca a definicao das geometrias
+# Um arquivo para cada parede
+# mais 2 arquivos com os cubos
+# As cores seguem a cena de Cornell
+# As paredes sao todas totalmente difusas
+# bem como os 2 cubos amarelos
+
+#object <name.obj> red green blue ka kd ks kt n [ir]
+
+# left wall RED
+object Input/leftwall.obj 1.0 0.0 0.0 0.3 0.7 0 0 5
+
+# right wall GREEN
+object Input/rightwall.obj 0.0 1.0 0.0 0.3 0.7 0 0 5
+
+# floor WHITE
+object Input/floor.obj 1.0 1.0 1.0 0.3 0.7 0 0 5
+
+# back wall WHITE
+object Input/back.obj 1.0 1.0 1.0 0.3 0.7 0 0 5
+
+# ceiling WHITE
+object Input/ceiling.obj 1.0 1.0 1.0 0.3 0.7 0 0 5
+
+# cube 1 WHITE
+#object Input/cube1.obj 1.0 1.0 1.0 0.3 0.0 1.0 0.0 5
+#object Input/cube1.obj 1.0 1.0 1.0 0.3 0.7 0 0 5
+
+# cube 2 WHITE
+#object Input/cube2.obj 1.0 1.0 1.0 0.3 0.0 1.0 0.0 5
+#object Input/cube2.obj 1.0 1.0 1.0 0.3 0.7 0 0 5
+
+
+#object definition
+# a b c d e f g h j k red green blue ka kd ks kt n [ir]
+# red sphere at x=0, y=0, z=-10 radius=1
+#objectquadric 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 10.0 99.0 1.0 1.0 1.0 0.3 0.0 1.0 0.0 5 1.0
+#objectquadric 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 20.0 399.0 1.0 1.0 1.0 0.3 0.0 1.0 0.0 5 1.0
+# f(x,y,z) = ax^2 + by^2 + cz^2 + 2dxy + 2eyz + 2fxz + 2gx + 2hy + 2jz + k = 0   
+
+# COELHO
+#object Input/bunny.obj 0.62 0.37 0.62 0.3 0.7 0.7 0 0
+
+# OSSOS
+object Input/bones.obj 0.5 0.5 0.5 0.3 0.1 1.0 0 0 0
+
+output Output/cornell4.png
